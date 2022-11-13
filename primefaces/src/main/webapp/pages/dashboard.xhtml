@@ -1,0 +1,22 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui"
+        template="../app-layout/template.xhtml">
+    <ui:define name="title">
+        Dashboard
+    </ui:define>
+    <ui:define name="pagecontent">
+        <div style="color: black; display: flex; font-weight: 600">Welcome, <div style="color: aquamarine">#{dashboardBean.loggedInUser.username}</div></div>
+        <br/>
+        <div style="display: flex;">
+            <h:form>
+                <p:commandButton id="logoutBtn" value="Logout" process="@form" action="#{dashboardBean.logout}"/>
+            </h:form>
+        </div>
+
+    </ui:define>
+</ui:composition>
+

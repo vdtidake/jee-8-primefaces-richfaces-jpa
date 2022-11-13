@@ -1,0 +1,152 @@
+* {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /*background: #4360E5;*/
+    /*background: -webkit-linear-gradient(bottom, #4360E5, #7DA5D9);*/
+    /*background: -moz-linear-gradient(bottom, #4360E5, #7DA5D9);*/
+    /*background: linear-gradient(to top, #4360E5, #7DA5D9);*/
+    /* Created with https://www.css-gradient.com */
+    background: #f5f5f5;
+    height: 100vh;
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: #0B0B3B;
+    position: relative;
+}
+
+.nav > .nav-header {
+    display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+    display: none;
+}
+
+.nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+}
+
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+    display: none;
+}
+
+body {
+    margin: 0;
+    color: #efefef;
+}
+
+.flexbox-container {
+    background: teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0;
+    min-height: 24em;
+}
+
+.flexbox-item {
+    max-width: 50%;
+    background: gray;
+}
+
+.content-div
+{
+    width:400px;
+    display:block;
+    position: absolute;
+    left:40%;
+    margin-left:-50px;
+    top:50%;
+    margin-top:-50px;
+    text-align:center;
+}
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: left;
+    color: #000
+}
+#loginBtn{
+    margin-left: 40px;
+}
+.link{
+    margin: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+input, select, textarea, button{font-family: 'Montserrat' !important;}
+button{
+    font-weight: 500;
+    font-size: 14px;
+}
+input{
+    height: 25px;
+}
+input[type="text"], input[type="password"]{
+    width: 250px
+}
+.left-align{
+    float: left;
+}
+.right-align{
+    float: right;
+}
+
+button, input[type="reset"], input[type="submit"], input[type="button"]{
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+table tr td{
+    color: #757575 !important;
+}
+.pnl-hdr, .ui-panel-titlebar{
+    font-weight: 600 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 14px !important;
+    color: #0B0B3B !important;
+}
+body .ui-message.ui-message-error, body .ui-message.ui-message-fatal{
+    float: left !important;
+}
+body .ui-messages>div{
+    padding: 6px !important;
+    margin: 0 !important;
+}
+.ui-messages-info-icon, .ui-messages-warn-icon, .ui-messages-error-icon, .ui-messages-fatal-icon, .ui-message-info-icon, .ui-message-warn-icon, .ui-message-error-icon, .ui-message-fatal-icon{
+    display: none !important;
+}

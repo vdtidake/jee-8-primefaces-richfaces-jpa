@@ -1,0 +1,40 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      template="app-layout/template.xhtml">
+    <ui:define name="title">
+        Login
+    </ui:define>
+    <ui:define name="pagecontent">
+        <p:panel>
+            <f:facet name="header">
+                Login
+            </f:facet>
+            <h:form id="login-form" prependId="false">
+                <p:messages globalOnly="true" />
+                <h:panelGrid columns="2">
+                    <p:outputLabel value="Username:"/>
+                    <p:inputText label="Username" id="username" required="true" requiredMessage="Username is required" value="#{loginBean.user.username}"/>
+                    <h:panelGroup/>
+                    <p:message for="username"/>
+
+                    <p:outputLabel value="Password:"/>
+                    <p:password label="Password" id="password" required="true" requiredMessage="Password is required" value="#{loginBean.user.password}"/>
+                    <h:panelGroup/>
+                    <p:message for="password"/>
+
+                    <f:facet name="footer">
+                        <p:commandButton id="loginBtn" value="Login" process="login-form" update="login-form" action="#{loginBean.performLogin}"/>
+                    </f:facet>
+                </h:panelGrid>
+            </h:form>
+        </p:panel>
+        <h:form>
+            <p:commandLink value="Register" action="pages/user-registration.xhtml?faces-redirect=true" process="@this" update="@none" styleClass="link left-align"/>
+            <p:commandLink value="Forgot Password" action="pages/reset-password.xhtml?faces-redirect=true" process="@this" update="@none" styleClass="link right-align"/>
+        </h:form>
+    </ui:define>
+</ui:composition>
+

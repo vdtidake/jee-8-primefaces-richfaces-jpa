@@ -1,0 +1,60 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui"
+        template="../app-layout/template.xhtml">
+    <ui:define name="title">
+        Register
+    </ui:define>
+    <ui:define name="pagecontent">
+        <style type="text/css">
+            .content-div{
+                top: 30% !important;
+            }
+        </style>
+        <p:panel id="registration-pnl">
+            <f:facet name="header">
+                Register
+            </f:facet>
+            <h:form id="registration-form" prependId="false">
+                <p:messages id="messages" globalOnly="true" />
+                <h:panelGrid columns="2">
+                    <p:outputLabel value="Username:"/>
+                    <p:inputText label="Username" id="username" required="true" requiredMessage="Username is required" value="#{userRegistrationBean.user.username}"/>
+                    <h:panelGroup/>
+                    <p:message for="username"/>
+
+                    <p:outputLabel value="Password:"/>
+                    <p:password label="Password" id="password" required="true" requiredMessage="Password is required" value="#{userRegistrationBean.user.password}"/>
+                    <h:panelGroup/>
+                    <p:message for="password"/>
+
+                    <p:outputLabel value="Email:"/>
+                    <p:inputText label="Email" id="email" required="true" requiredMessage="Email is required" value="#{userRegistrationBean.user.email}"/>
+                    <h:panelGroup/>
+                    <p:message for="email"/>
+
+                    <p:outputLabel value="First Name:"/>
+                    <p:inputText label="FirstName" id="firstname" value="#{userRegistrationBean.user.firstName}"/>
+                    <h:panelGroup/>
+                    <p:message for="firstname"/>
+
+                    <p:outputLabel value="Last Name:"/>
+                    <p:inputText label="LastName" id="lastname" value="#{userRegistrationBean.user.lastName}"/>
+                    <h:panelGroup/>
+                    <p:message for="lastname"/>
+
+                    <f:facet name="footer">
+                        <p:commandButton id="registerBtn" value="Register" process="registration-form" update="registration-pnl" action="#{userRegistrationBean.register}" style="margin-left: 75px"/>
+                        <p:commandButton value="Clear" process="@this" update="registration-pnl" action="#{userRegistrationBean.clear}" style="margin-left: 14px"/>
+                        <p:commandLink value="Go To Login" action="/index.xhtml?faces-redirect=true" process="@this" styleClass="link right-align"/>
+                    </f:facet>
+                </h:panelGrid>
+
+            </h:form>
+        </p:panel>
+    </ui:define>
+</ui:composition>
+
